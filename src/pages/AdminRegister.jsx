@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import defaultValues from '../utils/defaultValues'
 import { Link } from 'react-router-dom'
 import './style/adminRegister.css'
+import { ToastContainer, toast } from 'react-toastify'
 
 const AdminRegister = () => {
     const { register, handleSubmit, reset } = useForm()
@@ -12,13 +13,20 @@ const AdminRegister = () => {
         const url = `${import.meta.env.VITE_URL_API}admin/signup`
 
         axios.post(url, data)
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err))
+            .then(res => {
+                console.log(res.data)
+                toast.success('registro exitoso')
+            })
+            .catch(err => {
+                console.log(err)
+                toast.error('datos incorrectos')
+            })
         reset(defaultValues)
     }
 
     return (
         <div className='adminRegister__container'>
+            <ToastContainer />
             <form className='adminRegister__form' action="" onSubmit={handleSubmit(submit)}>
                 <h2>Registrate</h2>
                 <div className='adminRegister__div'>
