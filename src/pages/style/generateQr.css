@@ -1,0 +1,55 @@
+.generateQr__container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  gap: 2em;
+}
+.generateQr__Links {
+  display: flex;
+  gap: 2em;
+}
+
+.generateQr__Links a {
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.generateQr__Links a:hover {
+  color: rgb(255, 24, 24);
+}
+
+.generateQr__AllQr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-width: 1600px;
+}
+
+.generateQr__AllQr img {
+  width: 8em;
+}
+
+.generateQr__AllButtom {
+  display: flex;
+  gap: 2em;
+}
+
+.generateQr__AllButtom button {
+  color: white;
+  background-color: black;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 1em;
+  border-radius: 1em;
+  cursor: pointer;
+  font-weight: 600;
+}
+.generateQr__AllButtom button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}

@@ -1,0 +1,67 @@
+.adminRegister__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.adminRegister__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.adminRegister__form h2 {
+  color: #ff5b0e;
+  text-decoration: underline;
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.adminRegister__div {
+  display: flex;
+  gap: 0.5em;
+}
+
+.adminRegister__label {
+  color: #ff5b0e;
+  font-weight: 600;
+}
+
+.adminRegister__input {
+  border: 1px solid #ff5b0e;
+  border-radius: 0.2em;
+}
+
+.adminRegister__form button {
+  padding: 0.5em;
+  background-color: #ff5b0e;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.8em;
+  cursor: pointer;
+  margin: 0.5em;
+}
+
+.adminRegister__form button:hover {
+  background-color: #0f4324;
+  color: white;
+}
+
+.adminRegister__container a {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  background-color: #ff5b0e;
+  padding: 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.9em;
+}
+
+.adminRegister__container a:hover {
+  background-color: #0f4324;
+  color: white;
+}

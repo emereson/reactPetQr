@@ -1,0 +1,73 @@
+.adminUser__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  gap: 1.5em;
+}
+.adminUser__container h1 {
+  color: #ff5b0e;
+  text-decoration: underline;
+}
+
+.adminUser__dates {
+  width: 100%;
+  max-width: 1500px;
+}
+
+.adminUser__container ul {
+  overflow: hidden;
+  display: flex;
+  border: 2px solid #ff5b0e;
+}
+
+.adminUser__container li {
+  border-left: 1.5px solid #ff5b0e;
+  width: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65em;
+  font-weight: 800;
+  color: #0a5b3d;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.cardAdminUser__form {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  border: 2px solid #ff5b0e;
+  border-top: none;
+}
+
+.cardAdminUser__form input {
+  width: 11.338em;
+  padding: 0.8em;
+  text-align: center;
+  border: none;
+  border-left: 1px solid #ff5b0e;
+  font-size: 0.55em;
+  font-weight: 600;
+}
+.cardAdminUser__form input:hover {
+  background-color: #0a5b3d;
+  color: white;
+  cursor: pointer;
+}
+.cardAdminUser__form button {
+  background-color: #ff5b0e;
+  width: 10em;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.cardAdminUser__form button:hover {
+  background-color: #0a5b3d;
+}

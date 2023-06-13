@@ -1,0 +1,106 @@
+.userRegister__container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0 2em 0;
+  margin: auto;
+}
+.userRegister__container img {
+  width: 2.6em;
+}
+.userRegister__form {
+  width: 80%;
+  z-index: 4;
+  position: relative;
+  color: #0a5b3d;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 1em;
+  gap: 0.5em;
+}
+
+.userRegister__form h2 {
+  font-weight: 800;
+  font-size: 1.4em;
+  text-decoration: underline;
+}
+
+.userRegister__date {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.userRegister__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userRegister__selection {
+  display: flex;
+  gap: 2em;
+}
+.userRegister__selection select {
+  width: 6em;
+  font-size: 0.8em;
+}
+
+.userRegister__label {
+  font-weight: 800;
+  width: 100%;
+  font-size: 0.85em;
+}
+.userRegister__input {
+  border: 1px solid #ff6923;
+  border-radius: 0.3em;
+}
+
+#petImg {
+  display: none;
+}
+
+.userRegister__imgPet {
+  width: 4em;
+  height: 4em;
+  margin: auto;
+  cursor: pointer;
+}
+
+.userRegister__imgPet img {
+  width: 100%;
+  height: 100%;
+}
+
+.image__preview img {
+  width: 8em;
+  height: 9em;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+.userRegister__checkRegister {
+  font-size: 0.6em;
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.userRegister__button {
+  padding: 0.4em;
+  margin: 1em;
+  width: 7em;
+  font-size: 1em;
+  font-weight: 600;
+  color: aliceblue;
+  background-color: #ff6923;
+  border-radius: 0.5em;
+}
