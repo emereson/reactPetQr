@@ -14,11 +14,11 @@
 }
 
 .adminUser__dates {
-  width: 100%;
-  max-width: 1500px;
+  width: 1500px;
 }
 
 .adminUser__container ul {
+  width: 100%;
   overflow: hidden;
   display: flex;
   border: 2px solid #ff5b0e;
@@ -26,7 +26,7 @@
 
 .adminUser__container li {
   border-left: 1.5px solid #ff5b0e;
-  width: 10em;
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +47,7 @@
 }
 
 .cardAdminUser__form input {
-  width: 11.338em;
+  width: 100px;
   padding: 0.8em;
   text-align: center;
   border: none;
