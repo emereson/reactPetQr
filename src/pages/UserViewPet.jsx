@@ -27,7 +27,6 @@ const UserViewPet = ({ existUser }) => {
         }
     }, 3000);
 
-
     return (
         <>
             <div className='userViewPet__container'>
@@ -41,32 +40,35 @@ const UserViewPet = ({ existUser }) => {
                         </div>
                     </div>
                     <div className='userViewPet__name'>
-                        <h3>Hola Soy </h3>
+                        <h3>Hola, Soy </h3>
                         <h2>{existUser.user.namePet}</h2>
                     </div>
                     <div className='userViewPet__datePet'>
                         <h3>Mis Datos</h3>
                         <ul className='userViewPet__datePetUl'>
-                            <li>soy un : <p>{existUser?.user.species}</p></li>
-                            <li>raza : <p>{existUser?.user.race}</p></li>
-                            <li>edad :  <p>{existUser?.user.age}</p></li>
-                            <li>genero : <p>{existUser?.user.gender}</p></li>
-                            <li>esterilizado  : <p>{existUser?.user.sterilization}</p></li>
-                            <li>descripcion : <p>{existUser?.user.description}</p></li>
+                            <li>Soy un: <p>{existUser?.user.species}</p></li>
+                            <li>Raza: <p>{existUser?.user.race}</p></li>
+                            <li>Edad:  <p>{existUser?.user.age}</p></li>
+                            <li>Género: <p>{existUser?.user.gender}</p></li>
+                            <li>Esterilizado: <p>{existUser?.user.sterilization}</p></li>
+                            <li>Descripción : <p>{existUser?.user.description}</p></li>
 
                         </ul>
                     </div>
                     <div className='userViewPet__date'>
-                        <h3 >Datos De Mis Padres Humanos </h3>
+                        <h3 >Datos Del Propietario </h3>
                         <ul className='userViewPet__dateUl'>
-                            <li>nombre : <p>{existUser?.user.name}</p></li>
-                            <li>numero : <p>{existUser?.user.whatsapp}</p></li>
+                            <li>Nombre : <p>{existUser?.user.name}</p></li>
+                            <li>Numero : <p>{existUser?.user.whatsapp}</p></li>
                             <li>dirección  :  <p>{existUser?.user.address}</p></li>
                         </ul>
                     </div>
                     <div className='userViewPet__location'>
                         <h3>Mi Ubicación</h3>
                         <Location />
+                        <a className='userViewPet__contact-link' href={`tel:${existUser?.user.whatsapp}`}>
+                            Llamar <i className='bx bx-phone'></i>
+                        </a>
                         <Link className='userViewPet__contactame' to={`https://api.whatsapp.com/send?phone=51${existUser?.user.whatsapp}`} target='_blank'>Enviar Mensaje <i className='bx bxl-whatsapp'></i>
                         </Link>
                     </div>
@@ -76,7 +78,7 @@ const UserViewPet = ({ existUser }) => {
                     <div className='userViewPet__information-allDate'>
 
                         <h3>Aquí Estoy Con QR</h3>
-                        <p>te brindamos stickers y placas de identificación diseñados con la mejor tegnologia para que tu mascota sea identificada en cualquier momento y tengas la seguridad de localizar a tu mascota en tiempo real  con un sistema de geolocalización. <br />Registra todos los datos en el aplicativo para que tu mascota  este segura </p>
+                        <p>Te brindamos stickers y placas de identificación diseñados con la mejor tegnologia para que tu mascota sea identificada en cualquier momento y tengas la seguridad de localizar a tu mascota en tiempo real  con un sistema de geolocalización. <br />Registra todos los datos en el aplicativo para que tu mascota  este segura </p>
                         <p>Realiza tu pedido que estamos a tu servicio </p>
                         <ul>
                             <li><i className='bx bxl-whatsapp'></i></li>
@@ -100,6 +102,7 @@ const UserViewPet = ({ existUser }) => {
                     }
                 </div>
             </div>
+            <h4 className='copyRigth'>Copyrigth © Aquí Estoy - Todos los derechos reservados</h4>
         </>
     )
 }

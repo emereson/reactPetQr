@@ -1,0 +1,9 @@
+.copyRigth {
+  position: relative;
+  z-index: 20;
+  color: aliceblue;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  text-align: center;
+  font-size: 0.69em;
+  font-weight: 800;
+}

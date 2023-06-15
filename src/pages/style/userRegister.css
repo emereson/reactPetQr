@@ -27,7 +27,7 @@
 
 .userRegister__form h2 {
   font-weight: 800;
-  font-size: 1.4em;
+  font-size: 1.7em;
   text-decoration: underline;
 }
 
@@ -52,17 +52,20 @@
 }
 .userRegister__selection select {
   width: 6em;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .userRegister__label {
-  font-weight: 800;
+  font-weight: 600;
   width: 100%;
-  font-size: 0.85em;
+  font-size: 1.15em;
 }
 .userRegister__input {
   border: 1px solid #ff6923;
   border-radius: 0.3em;
+  width: 17em;
+  padding: 0.4em;
+  text-align: center;
 }
 
 #petImg {
@@ -89,9 +92,12 @@
 }
 
 .userRegister__checkRegister {
+  display: flex;
   font-size: 0.6em;
   font-weight: 600;
   padding: 0.5em;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .userRegister__button {
@@ -103,4 +109,14 @@
   color: aliceblue;
   background-color: #ff6923;
   border-radius: 0.5em;
+}
+
+.bxs-user,
+.wharsapp,
+.bx-envelope {
+  position: absolute;
+  margin-top: 1.15em;
+  left: 1.8em;
+  font-weight: 600;
+  font-size: 1.4em;
 }

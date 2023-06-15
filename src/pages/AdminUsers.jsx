@@ -17,6 +17,7 @@ const AdminUsers = () => {
     }, [])
 
 
+    console.log(users);
     return (
         <div className='adminUser__container'>
             <h1>Tus Usuarios</h1>

@@ -85,30 +85,35 @@ const UserRegisterPet = () => {
                             <label className="userRegister__label" htmlFor="name">
                                 Nombre del Propetario:
                             </label>
+                            <i className='bx bxs-user' ></i>
                             <input
                                 className="userRegister__input"
                                 {...register('name')}
                                 id="name"
                                 type="text"
                                 required
+                                placeholder='Nombre'
                             />
                         </div>
                         <div className="userRegister__div">
                             <label className="userRegister__label" htmlFor="whatsapp">
                                 Numero de whatsapp:
                             </label>
+                            <i className='bx bxl-whatsapp wharsapp'></i>
                             <input
                                 className="userRegister__input"
                                 {...register('whatsapp')}
                                 id="whatsapp"
                                 type="text"
                                 required
+                                placeholder='whatsapp'
                             />
                         </div>
                         <div className="userRegister__div">
                             <label className="userRegister__label" htmlFor="email">
                                 Correo Electronico:
                             </label>
+                            <i className='bx bx-envelope' ></i>
                             <input
                                 className="userRegister__input"
                                 {...register('email')}
@@ -222,6 +227,7 @@ const UserRegisterPet = () => {
                             rows="5"
                             cols="23"
                             required
+                            placeholder='Describir las características más relevantes de su mascota'
                         />
                     </div>
                     <div className="userRegister__div">
@@ -248,13 +254,14 @@ const UserRegisterPet = () => {
                     </div>
                     <div className="userRegister__div">
                         <p className="userRegister__checkRegister">
+                            <img src="../checkRegister.jpeg" alt="" />
                             Verifique todos los datos antes de registrarlos
                         </p>
-                        <img src="../checkRegister.jpeg" alt="" />
                     </div>
                     <button className="userRegister__button">registrar</button>
                 </form>
             </div>
+            <h4 className='copyRigth'>Copyrigth © Aquí Estoy - Todos los derechos reservados</h4>
         </div>
     );
 };

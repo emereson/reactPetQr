@@ -52,8 +52,8 @@
 }
 
 .userViewPet__img {
-  height: 11em;
-  width: 10em;
+  height: 16em;
+  width: 14em;
   padding: 0.4em;
   border-radius: 1em;
   border: 1.5px solid #0a5b3d;
@@ -77,13 +77,13 @@
   gap: 0.4em;
 }
 .userViewPet__name h3 {
-  font-size: 0.95em;
+  font-size: 1.2em;
   font-weight: 700;
   color: #ff5b0e;
 }
 
 .userViewPet__name h2 {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: 800;
   color: #0b3c15;
   margin-top: -0.2em;
@@ -92,7 +92,7 @@
   z-index: 1;
   width: 88%;
   max-width: 400px;
-  padding: 1em 0 1em 1em;
+  padding: 1em 0 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,7 +117,7 @@
 
 .userViewPet__datePetUl li {
   display: flex;
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: #171717;
   font-weight: 600;
   justify-content: space-between;
@@ -134,7 +134,7 @@
   z-index: 1;
   width: 88%;
   max-width: 400px;
-  padding: 0 0 1em 1em;
+  padding: 0 0 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,14 +159,14 @@
 
 .userViewPet__dateUl li {
   display: flex;
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: #171717;
   font-weight: 600;
   justify-content: space-between;
 }
 
 .userViewPet__dateUl p {
-  padding-left: 4em;
+  padding-left: 5em;
   text-align: start;
   width: 70%;
   overflow-wrap: break-word;
@@ -202,8 +202,32 @@
   font-size: 0.8em;
   font-weight: 600;
   background-color: #ff5b0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
 }
 
+.userViewPet__location i {
+  font-size: 1.6em;
+}
+
+.userViewPet__contact-link {
+  width: 9em;
+  color: #ffffff;
+  padding: 0.5em;
+  margin: 1em;
+  margin-bottom: -1em;
+  border-radius: 1em;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  background-color: #ff5b0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
 .userViewPet__information {
   width: 85%;
   z-index: 1;
@@ -234,7 +258,7 @@
 }
 
 .userViewPet__information p {
-  font-size: 0.63em;
+  font-size: 0.7em;
   font-weight: 600;
   color: #0f4324;
   padding-top: 0.8em;
