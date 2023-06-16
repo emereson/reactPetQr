@@ -21,7 +21,8 @@ const AdminUsers = () => {
     return (
         <div className='adminUser__container'>
             <h1>Tus Usuarios</h1>
-            <div>
+            <div className='adminUser__Links'>
+                <Link to='/admin/login'>Inicio</Link>
                 <Link to='/admin/generateQr'>Generar Qr</Link>
                 <Link to='/admin/sponsor'>Tus Auspiciadores</Link>
             </div>

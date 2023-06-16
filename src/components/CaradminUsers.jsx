@@ -121,12 +121,14 @@ const CaradminUsers = ({ user }) => {
                     value={formData.description}
                     onChange={handleChange}
                 />
-                <input
-                    type="text"
+                <select
                     name="status"
                     value={formData.status}
                     onChange={handleChange}
-                />
+                >
+                    <option value="active">active</option>
+                    <option value="disabled">disabled</option>
+                </select>
                 <input
                     type="text"
                     name="dateUser"
