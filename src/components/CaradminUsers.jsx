@@ -136,7 +136,7 @@ const CaradminUsers = ({ user }) => {
                     onChange={handleChange}
                 />
 
-                <button type="submit">Editar</button>
+                <button type="submit">Actualizar</button>
             </form>
         </div>
     );

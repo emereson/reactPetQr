@@ -42,7 +42,7 @@ const AdminUsers = () => {
                     <li>Descricion</li>
                     <li>Status</li>
                     <li>Usuario Creado</li>
-                    <li>Editar</li>
+                    <li>actualizar</li>
                 </ul>
                 {
                     users?.users.map(user => (

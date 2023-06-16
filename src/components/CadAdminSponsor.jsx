@@ -99,7 +99,7 @@ const CadAdminSponsor = ({ sponsor }) => {
                     <option value="disabled">disabled</option>
                 </select>
 
-                <button type="submit">Editar</button>
+                <button type="submit">Actualizar</button>
             </form>
         </div>
     );
