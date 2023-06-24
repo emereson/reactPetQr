@@ -9,7 +9,7 @@ const AdminUsers = () => {
     const [users, setUsers] = useState()
 
     useEffect(() => {
-        const url = `${import.meta.env.VITE_URL_API}/users`
+        const url = `${import.meta.env.VITE_URL_API}users`
 
         axios.get(url, config)
             .then(res => setUsers(res.data))

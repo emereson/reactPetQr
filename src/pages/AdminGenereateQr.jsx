@@ -16,7 +16,7 @@ const AdminGenerateQr = () => {
 
     const generateQrCodes = async () => {
         try {
-            const url = `${import.meta.env.VITE_URL_API}/admin/generateQr`;
+            const url = `${import.meta.env.VITE_URL_API}admin/generateQr`;
             const response = await axios.get(url, config);
             setQrCodes(response.data.qrCodes);
 

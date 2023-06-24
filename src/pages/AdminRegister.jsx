@@ -10,7 +10,7 @@ const AdminRegister = () => {
     const { register, handleSubmit, reset } = useForm()
 
     const submit = data => {
-        const url = `${import.meta.env.VITE_URL_API}/admin/signup`
+        const url = `${import.meta.env.VITE_URL_API}admin/signup`
 
         axios.post(url, data)
             .then(res => {

@@ -12,7 +12,7 @@ const UserViewPet = ({ existUser }) => {
 
 
     useEffect(() => {
-        const url = `${import.meta.env.VITE_URL_API}/sponsor`
+        const url = `${import.meta.env.VITE_URL_API}sponsor`
 
         axios.get(url)
             .then(res => setsponsors(res.data))
