@@ -11,7 +11,7 @@ const AdminLogin = () => {
     const [token, setToken] = useState(null);
 
     const submit = data => {
-        const url = `${import.meta.env.VITE_URL_API}admin/login`;
+        const url = `${import.meta.env.VITE_URL_API}/admin/login`;
 
         axios.post(url, data)
             .then(res => {

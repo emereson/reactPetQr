@@ -13,7 +13,7 @@ const AdminSponsors = () => {
     const { register, handleSubmit, reset } = useForm()
 
     useEffect(() => {
-        const url = `${import.meta.env.VITE_URL_API}sponsor`
+        const url = `${import.meta.env.VITE_URL_API}/sponsor`
 
         axios.get(url, config)
             .then(res => setsponsors(res.data))
@@ -21,7 +21,7 @@ const AdminSponsors = () => {
     }, [])
 
     const submit = (data) => {
-        const url = `${import.meta.env.VITE_URL_API}sponsor`;
+        const url = `${import.meta.env.VITE_URL_API}/sponsor`;
 
         const formData = new FormData();
         formData.append('name', data.name);
