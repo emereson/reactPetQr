@@ -11,7 +11,7 @@ const UserViewPet = ({ existUser }) => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
 
-  const predefinedMessage = `¡Hola! Encontre  a tu en mascota esta ubicacion: 
+  const predefinedMessage = `¡Hola! Encontre  a tu en mascota en esta ubicación: 
   https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}
   `;
 
@@ -97,8 +97,8 @@ const UserViewPet = ({ existUser }) => {
               <li>
                 Numero<p>{existUser?.user.whatsapp}</p>
               </li>
-              <li>
-                dirección<p>{existUser?.user.address}</p>
+              <li className="userViewPet__li">
+                Dirección<p>{existUser?.user.address}asdasddasadsasdsa</p>
               </li>
             </ul>
           </div>

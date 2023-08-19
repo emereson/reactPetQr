@@ -174,7 +174,7 @@
   margin-bottom: -0.4em;
   border-radius: 1em;
   text-align: center;
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 600;
   background-color: #ff5b0e;
   display: flex;
@@ -184,7 +184,7 @@
 }
 
 .userViewPet__location i {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 .userViewPet__contact-link {
