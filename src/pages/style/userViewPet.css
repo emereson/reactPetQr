@@ -229,14 +229,14 @@
 .userViewPet__information h3 {
   padding-bottom: 0.2em;
   margin-bottom: 0.5em;
-  font-size: 1.3em;
+  font-size: 1.8em;
   font-weight: 800;
 
   border-bottom: 2px solid #ff5b0e;
 }
 
 .userViewPet__information p {
-  font-size: 0.65em;
+  font-size: 0.85em;
   font-weight: 700;
 }
 
