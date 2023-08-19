@@ -95,10 +95,10 @@ const UserViewPet = ({ existUser }) => {
                 Nombre<p>{existUser?.user.name}</p>
               </li>
               <li>
-                Numero<p>{existUser?.user.whatsapp}</p>
+                Número<p>{existUser?.user.whatsapp}</p>
               </li>
               <li className="userViewPet__li">
-                Dirección<p>{existUser?.user.address}asdasddasadsasdsa</p>
+                Dirección<p>{existUser?.user.address}</p>
               </li>
             </ul>
           </div>
@@ -167,6 +167,9 @@ const UserViewPet = ({ existUser }) => {
                 </a>
               </li>
             </ul>
+            <a className="userViewPewt__informaiton-net" href="https://web.aquiestoyconqr.com">
+              <img src="./net.jfif" alt="" />
+            </a>
             <h4>www.web.aquiestoyconqr.com</h4>
             <img src="./dog.png" alt="" />
           </div>
@@ -183,6 +186,7 @@ const UserViewPet = ({ existUser }) => {
           </div>
         </div>
       )}
+
       <h4 className="copyRigth copyRigthH4">
         Copyrigth © Aquí Estoy - Todos los derechos reservados
       </h4>

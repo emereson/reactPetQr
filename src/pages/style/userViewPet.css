@@ -254,7 +254,17 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.userViewPewt__informaiton-net {
+  margin-top: 1em;
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
 
+.userViewPewt__informaiton-net img {
+  width: 50%;
+}
 .sponsor__container {
   position: relative;
   width: 100%;
