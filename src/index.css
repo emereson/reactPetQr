@@ -23,7 +23,9 @@ li,
 }
 
 img {
+  position: relative;
   display: block;
+  z-index: 10;
   width: 20%;
 }
 

@@ -29,7 +29,7 @@ const Location = ({ latitude, longitude }) => {
 
         const addInfoWindow = (lat, lng) => {
           const infoWindow = new googleMaps.InfoWindow({
-            content: '¡Estás aquí!',
+            content: '¡Estás aquí! 🔻',
           });
 
           infoWindow.setPosition({ lat, lng });
@@ -54,7 +54,7 @@ const Location = ({ latitude, longitude }) => {
                 map.setCenter({ lat: userLatitude, lng: userLongitude });
                 map.setZoom(15);
 
-                addMarker(userLatitude, userLongitude);
+                addMarker(userLatitude, userLongitude, true); // Agregar marcador de ubicación actual
                 addInfoWindow(userLatitude, userLongitude);
               },
               (error) => {

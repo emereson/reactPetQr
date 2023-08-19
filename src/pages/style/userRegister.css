@@ -67,13 +67,14 @@
   gap: 2em;
 }
 .userRegister__selection option {
-  width: 90%;
   height: 2em;
   font-size: 1em;
+  scale: 0.1;
 }
 .userRegister__esterelizado option {
-  width: 90%;
   height: 2em;
+  font-size: 1em;
+  scale: 0.1;
 }
 .useSelection__contianer {
   width: 50%;
