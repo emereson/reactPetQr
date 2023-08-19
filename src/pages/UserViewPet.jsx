@@ -68,7 +68,7 @@ const UserViewPet = ({ existUser }) => {
             <h2>{existUser?.user.namePet.toUpperCase()}</h2>
             <ul className="userViewPet__datePetUl">
               <li>
-                Soy un <p>{existUser?.user.species}asdsadasd</p>
+                Soy un <p>{existUser?.user.species}</p>
               </li>
               <li>
                 Raza <p>{existUser?.user.race}</p>
@@ -84,7 +84,7 @@ const UserViewPet = ({ existUser }) => {
               </li>
               <li></li>
               <li className="userViewPet__li">
-                Descripción <p>{existUser?.user.description}asdsadsaddsaasasdasasasdasdsad</p>
+                Descripción <p>{existUser?.user.description}</p>
               </li>
             </ul>
           </div>
