@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Location from './Location';
 import './style/userViewPet.css';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Sponsor from './Sponsor';
 
@@ -56,7 +55,7 @@ const UserViewPet = ({ existUser }) => {
         <span className="line__green"></span>
         <div className="userViewPet__allDate">
           <div className="userViewPet__hereIam">
-            <h2>AQUÍ ESTOY</h2>
+            <h2>AQUÍ ESTOY CON QR</h2>
             <div className="userViewPet__img">
               <img src={existUser?.user.petImg} alt="" />
             </div>
