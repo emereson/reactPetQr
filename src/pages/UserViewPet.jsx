@@ -62,99 +62,130 @@ const UserViewPet = ({ existUser }) => {
             </div>
           </div>
           <div className="userViewPet__name">
-            <h3>Hola, Soy </h3>
-            <h2>{existUser.user.namePet}</h2>
+            <h3>Me llamo </h3>
           </div>
           <div className="userViewPet__datePet">
-            <h3>Mis Datos</h3>
+            <h2>{existUser?.user.namePet.toUpperCase()}</h2>
             <ul className="userViewPet__datePetUl">
               <li>
-                Soy un: <p>{existUser?.user.species}</p>
+                Soy un <p>{existUser?.user.species}asdsadasd</p>
               </li>
               <li>
-                Raza: <p>{existUser?.user.race}</p>
+                Raza <p>{existUser?.user.race}</p>
               </li>
               <li>
-                Edad: <p>{existUser?.user.age}</p>
+                Edad <p>{existUser?.user.age}</p>
               </li>
               <li>
-                Género: <p>{existUser?.user.gender}</p>
+                Sexo <p>{existUser?.user.gender}</p>
               </li>
               <li>
-                Esterilizado: <p>{existUser?.user.sterilization}</p>
+                Esterilizado <p>{existUser?.user.sterilization}</p>
               </li>
-              <li>
-                Descripción : <p>{existUser?.user.description}</p>
+              <li></li>
+              <li className="userViewPet__li">
+                Descripción <p>{existUser?.user.description}asdsadsaddsaasasdasasasdasdsad</p>
               </li>
             </ul>
           </div>
-          <div className="userViewPet__date">
-            <h3>Datos Del Propietario </h3>
-            <ul className="userViewPet__dateUl">
+          <div className="userViewPet__datePet userViewPet__date">
+            <h2>Propietario </h2>
+            <ul className="userViewPet__datePetUl">
               <li>
-                Nombre : <p>{existUser?.user.name}</p>
+                Nombre<p>{existUser?.user.name}</p>
               </li>
               <li>
-                Numero : <p>{existUser?.user.whatsapp}</p>
+                Numero<p>{existUser?.user.whatsapp}</p>
               </li>
               <li>
-                dirección : <p>{existUser?.user.address}</p>
+                dirección<p>{existUser?.user.address}</p>
               </li>
             </ul>
           </div>
+
           <div className="userViewPet__location">
             <h3>Mi Ubicación</h3>
             <Location latitude={latitude} longitude={longitude} />
-            <a className="userViewPet__contact-link" href={`tel:${existUser?.user.whatsapp}`}>
-              Llamar <i className="bx bx-phone"></i>
-            </a>
-            <Link
+            <a
               className="userViewPet__contactame"
-              to={`https://api.whatsapp.com/send?phone=51${
+              href={`https://api.whatsapp.com/send?phone=51${
                 existUser?.user.whatsapp
               }&text=${encodeURIComponent(predefinedMessage)}`}
               target="_blank"
             >
               Enviar Mensaje <i className="bx bxl-whatsapp"></i>
-            </Link>
+            </a>
+            <a className="userViewPet__contactame" href={`tel:${existUser?.user.whatsapp}`}>
+              Llamar <i className="bx bx-phone"></i>
+            </a>
           </div>
         </div>
 
         <div className="userViewPet__information">
           <div className="userViewPet__information-allDate">
             <h3>Aquí Estoy Con QR</h3>
+            <p>Es la mejor aplicación para identificar a tu mascota que tanto quieres y cuidas.</p>
+            <p>Te brindamos un código QR con acceso simplificado.</p>
             <p>
-              Te brindamos stickers y placas de identificación diseñados con la mejor tegnologia
-              para que tu mascota sea identificada en cualquier momento y tengas la seguridad de
-              localizar a tu mascota en tiempo real con un sistema de geolocalización. <br />
-              Registra todos los datos en el aplicativo para que tu mascota este segura{' '}
+              Nosotros nos preocupamos por brindarte <br /> total seguridad y confianza, <br />{' '}
+              porque hemos desarrollado la mejor tecnología <br /> con un diseño exclusivo <br />{' '}
+              para una rápida comunicación y ubicación en tiempo real.
             </p>
-            <p>Realiza tu pedido que estamos a tu servicio </p>
+            <p>Te ofrecemos stickers, placas y collares de identificación QR.</p>
+
             <ul>
               <li>
-                <i className="bx bxl-whatsapp"></i>
+                <a href="tel:958004140" target="_blank" rel="noopener noreferrer">
+                  <i className="bx bx-phone"></i>
+                </a>
               </li>
               <li>
-                <i className="bx bxl-facebook-circle"></i>
+                <a
+                  href="https://api.whatsapp.com/send?phone=51958004140"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-whatsapp"></i>
+                </a>
               </li>
               <li>
-                <i className="bx bxl-instagram"></i>
+                <a
+                  href="https://www.instagram.com/aquiestoy.conqr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/aquiestoycqr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-facebook-circle"></i>
+                </a>
               </li>
             </ul>
+            <h4>www.web.aquiestoyconqr.com</h4>
+            <img src="./dog.png" alt="" />
           </div>
         </div>
       </div>
-
-      <div className="sponsor__container">
-        <div className="sponsor__slider">
-          {sponsors?.length === 0
-            ? ''
-            : sponsors?.sponsors.map((cardsponsor) => (
-                <Sponsor key={cardsponsor.id} cardsponsor={cardsponsor} imgSelected={imgSelected} />
-              ))}
+      {sponsors?.length === 0 ? (
+        ''
+      ) : (
+        <div className="sponsor__container">
+          <div className="sponsor__slider">
+            {sponsors?.sponsors.map((cardsponsor) => (
+              <Sponsor key={cardsponsor.id} cardsponsor={cardsponsor} imgSelected={imgSelected} />
+            ))}
+          </div>
         </div>
-      </div>
-      <h4 className="copyRigth">Copyrigth © Aquí Estoy - Todos los derechos reservados</h4>
+      )}
+      <h4 className="copyRigth copyRigthH4">
+        Copyrigth © Aquí Estoy - Todos los derechos reservados
+      </h4>
     </>
   );
 };

@@ -30,12 +30,13 @@
   width: 85%;
   background-color: white;
   margin-top: 2em;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2em;
 }
 .userViewPet__hereIam {
   display: flex;
@@ -46,17 +47,16 @@
 }
 
 .userViewPet__hereIam h2 {
-  color: #0a5b3d;
+  color: #287a5c;
   font-weight: 800;
-  text-decoration: underline;
 }
 
 .userViewPet__img {
-  height: 16em;
+  height: 15em;
   width: 14em;
   padding: 0.4em;
   border-radius: 1em;
-  border: 1.5px solid #0a5b3d;
+  border: 2px solid #ff5b0e;
 }
 
 .userViewPet__img img {
@@ -66,120 +66,94 @@
 }
 .userViewPet__name {
   z-index: 1;
-  width: 95%;
-  padding-bottom: 0.5em;
-  padding-top: 1em;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 1.5px solid #ff5b0e;
-  gap: 0.4em;
 }
 .userViewPet__name h3 {
-  font-size: 1.2em;
+  margin-top: -1em;
+  font-size: 1.5em;
   font-weight: 700;
   color: #ff5b0e;
 }
 
-.userViewPet__name h2 {
-  font-size: 2em;
-  font-weight: 800;
-  color: #0b3c15;
-  margin-top: -0.2em;
-}
 .userViewPet__datePet {
+  position: relative;
+  margin-top: -1em;
   z-index: 1;
-  width: 88%;
+  width: 95%;
   max-width: 400px;
-  padding: 1em 0 1em 0;
+  padding: 1em 0.4em 0.4em 0.4em;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  border-radius: 1em;
   align-items: center;
+  border: 2px solid #ff5b0e;
+}
+.userViewPet__datePet h2 {
+  position: absolute;
+  top: -0.6em;
+  padding: 0 0.5em 0 0.5em;
+  font-size: 1.5em;
+  font-weight: 800;
+  background-color: white;
+  color: #186e4e;
+  margin-top: -0.2em;
+  z-index: 5;
+  text-align: center;
 }
 
-.userViewPet__datePet h3 {
-  font-size: 0.8em;
-  font-weight: 800;
-  text-align: start;
-  width: 100%;
-  text-decoration: underline;
-  color: #0b3c15;
-}
 .userViewPet__datePetUl {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 0.2em;
-  padding-top: 0.4em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5em;
+  border-radius: 1em;
+  background-color: #0e402e;
+  padding: 0.5em;
 }
 
 .userViewPet__datePetUl li {
+  width: 30%;
+  height: auto;
   display: flex;
-  font-size: 0.7em;
-  color: #171717;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  color: #ffffff;
   font-weight: 600;
-  justify-content: space-between;
 }
 
 .userViewPet__datePetUl p {
-  padding-left: 4em;
-  text-align: start;
-  width: 65%;
+  width: 100%;
+  max-width: 270px;
+  color: #ff5100;
+  font-size: 1.1em;
+  font-weight: 700;
   overflow-wrap: break-word;
+  text-align: center;
 }
-
+.userViewPet__li {
+  width: 100% !important;
+  padding-top: 0.5em;
+}
 .userViewPet__date {
-  z-index: 1;
-  width: 88%;
-  max-width: 400px;
-  padding: 0 0 1em 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.userViewPet__date h3 {
-  font-size: 0.8em;
-  font-weight: 800;
-  text-align: start;
-  width: 100%;
-  text-decoration: underline;
-  color: #0b3c15;
-}
-
-.userViewPet__dateUl {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2em;
-  padding-top: 0.4em;
-}
-
-.userViewPet__dateUl li {
-  display: flex;
-  font-size: 0.7em;
-  color: #171717;
-  font-weight: 600;
-  justify-content: space-between;
-}
-
-.userViewPet__dateUl p {
-  padding-left: 5em;
-  text-align: start;
-  width: 70%;
-  overflow-wrap: break-word;
+  margin: 0;
 }
 
 .userViewPet__location {
-  width: 109%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0.6em 0 0.5em 0;
-  gap: 1em;
+  gap: 2em;
   background-color: white;
   border-radius: 1em;
 }
@@ -189,17 +163,18 @@
   font-size: 1em;
   font-weight: 800;
   text-decoration: underline;
-  color: #0b3c15;
+  color: #186e4e;
+  margin-top: -1em;
+  margin-bottom: -1em;
 }
 .userViewPet__contactame {
-  width: 12em;
+  width: 40%;
   color: #ffffff;
   padding: 0.5em;
-  margin: 1em;
   margin-bottom: -0.4em;
   border-radius: 1em;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 600;
   background-color: #ff5b0e;
   display: flex;
@@ -213,7 +188,7 @@
 }
 
 .userViewPet__contact-link {
-  width: 9em;
+  width: 45%;
   color: #ffffff;
   padding: 0.5em;
   margin: 1em;
@@ -237,31 +212,32 @@
   border-radius: 1em;
 }
 .userViewPet__information-allDate {
-  width: 85%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 0.4em;
+  color: #186e4e;
   margin: auto;
   padding: 0.5em;
   z-index: 1;
-  border: 1px solid #0b3c15;
+  border: 2px solid #ff5b0e;
 
   border-radius: 1em;
 }
 .userViewPet__information h3 {
-  font-size: 1.1em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
   font-weight: 800;
-  color: #0b3c15;
+
+  border-bottom: 2px solid #ff5b0e;
 }
 
 .userViewPet__information p {
-  font-size: 0.7em;
-  font-weight: 600;
-  color: #0f4324;
-  padding-top: 0.8em;
+  font-size: 0.65em;
+  font-weight: 700;
 }
 
 .userViewPet__information ul {
@@ -272,8 +248,8 @@
 
 .userViewPet__information i {
   font-size: 1.7em;
-  color: #0f4324;
-  background-color: #ff5b0e;
+  color: #ff5b0e;
+  background-color: #186e4e;
   padding: 0.1em;
   border-radius: 50%;
   cursor: pointer;
@@ -301,4 +277,8 @@
   display: flex;
   transition: transform 300ms ease;
   overflow: hidden;
+}
+
+.copyRigthH4 {
+  margin-top: -3em;
 }

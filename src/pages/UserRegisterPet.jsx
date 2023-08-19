@@ -12,6 +12,10 @@ const UserRegisterPet = () => {
   const [existUser, setexistUser] = useState();
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
+  const [viewIcon, setViewIcon] = useState('');
+  const [viewIcon2, setViewIcon2] = useState('');
+  const [viewIcon3, setViewIcon3] = useState('');
+  const [viewIcon4, setViewIcon4] = useState('');
 
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}users/${id}`;
@@ -21,7 +25,6 @@ const UserRegisterPet = () => {
       .then((res) => setexistUser(res.data))
       .catch((err) => console.log(err));
   }, []);
-  console.log(existUser);
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     setSelectedImage(URL.createObjectURL(file));
@@ -47,6 +50,7 @@ const UserRegisterPet = () => {
     formData.append('age', data.age);
     formData.append('sterilization', data.sterilization);
     formData.append('description', data.description);
+
     if (selectedFile) {
       formData.append('petImg', selectedFile);
     }
@@ -63,6 +67,11 @@ const UserRegisterPet = () => {
       .catch((err) => console.log(err));
   };
 
+  const [selectedOption, setSelectedOption] = useState(null); // Inicialmente no se ha seleccionado nada
+
+  const handleSelectChange = (selectedOption) => {
+    setSelectedOption(selectedOption); // Actualizar el valor seleccionado en el estado
+  };
   if (existUser?.user.qrId === id) {
     return (
       <div>
@@ -71,6 +80,43 @@ const UserRegisterPet = () => {
     );
   }
 
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+
+    if (inputValue.length === 0) {
+      setViewIcon('');
+    } else {
+      setViewIcon(event.target.id);
+    }
+  };
+  const handleInputChange2 = (event) => {
+    const inputValue = event.target.value;
+
+    if (inputValue.length === 0) {
+      setViewIcon2('');
+    } else {
+      setViewIcon2(event.target.id);
+    }
+  };
+  const handleInputChange3 = (event) => {
+    const inputValue = event.target.value;
+
+    if (inputValue.length === 0) {
+      setViewIcon3('');
+    } else {
+      setViewIcon3(event.target.id);
+    }
+  };
+  const handleInputChange4 = (event) => {
+    const inputValue = event.target.value;
+
+    if (inputValue.length === 0) {
+      setViewIcon4('');
+    } else {
+      setViewIcon4(event.target.id);
+    }
+  };
+
   return (
     <div>
       <div className="userRegister__container">
@@ -78,59 +124,70 @@ const UserRegisterPet = () => {
         <span className="line__green"></span>
         <ToastContainer />
         <form className="userRegister__form" onSubmit={handleSubmit(submit)}>
-          <h2>Registro</h2>
+          <h2>REGISTRO</h2>
           <img src="../register.png" alt="" />
           <div className="userRegister__date">
             <div className="userRegister__div">
               <label className="userRegister__label" htmlFor="name">
                 Nombre del Propetario:
               </label>
-              <i className="bx bxs-user"></i>
+
+              {viewIcon === 'name' ? '' : <i className="bx bxs-user"></i>}
               <input
                 className="userRegister__input"
                 {...register('name')}
                 id="name"
                 type="text"
                 required
-                placeholder="Nombre"
+                placeholder="Nombre y Apellidos"
+                onChange={handleInputChange}
               />
             </div>
             <div className="userRegister__div">
               <label className="userRegister__label" htmlFor="whatsapp">
                 Numero de whatsapp:
               </label>
-              <i className="bx bxl-whatsapp wharsapp"></i>
+              {viewIcon2 === 'whatsapp' ? '' : <i className="bx bxl-whatsapp wharsapp"></i>}
+
               <input
                 className="userRegister__input"
                 {...register('whatsapp')}
                 id="whatsapp"
                 type="text"
                 required
-                placeholder="whatsapp"
+                placeholder="987654321"
+                onChange={handleInputChange2}
               />
             </div>
             <div className="userRegister__div">
               <label className="userRegister__label" htmlFor="email">
                 Correo Electronico:
               </label>
-              <i className="bx bx-envelope"></i>
+              {viewIcon3 === 'email' ? '' : <i className="bx bx-envelope"></i>}
+
               <input
                 className="userRegister__input"
                 {...register('email')}
                 id="email"
                 type="text"
+                placeholder="correo"
                 required
+                onChange={handleInputChange3}
               />
             </div>
             <div className="userRegister__div">
               <label className="userRegister__label" htmlFor="address">
                 Dirección:
               </label>
+              {viewIcon4 === 'address' ? '' : <i className="bx bxs-map useRegister__direction"></i>}
+
               <input
                 className="userRegister__input"
                 {...register('address')}
                 id="address"
                 type="text"
+                onChange={handleInputChange4}
+                placeholder="Dirección"
                 required
               />
             </div>
@@ -149,78 +206,77 @@ const UserRegisterPet = () => {
             />
           </div>
           <div className="userRegister__selection">
-            <div className="userRegister__div">
+            <div className="useSelection__contianer">
               <label className="userRegister__label" htmlFor="species">
                 Especie:
               </label>
-              <select
-                className="userRegister__input"
-                {...register('species')}
-                id="species"
-                required
-              >
+
+              <select id="species" {...register('species')} className="custom-select">
                 <option value="perro">Perro</option>
                 <option value="gato">Gato</option>
-                <option value="otro">Otro</option>
               </select>
             </div>
 
-            <div className="userRegister__div">
+            <div className="useSelection__contianer">
               <label className="userRegister__label" htmlFor="gender">
                 Sexo:
               </label>
-              <select className="userRegister__input" {...register('gender')} id="gender" required>
-                <option value="masculino">Macho</option>
-                <option value="femenino">Hembra</option>
+              <select id="species" {...register('gender')} className="custom-select">
+                <option value="Macho">Macho</option>
+                <option value="Hembra">Hembra</option>
               </select>
             </div>
           </div>
-          <div className="userRegister__div">
-            <label className="userRegister__label" htmlFor="race">
-              Raza:
-            </label>
-            <input
-              className="userRegister__input"
-              {...register('race')}
-              id="race"
-              type="text"
-              required
-            />
+          <div className="userRegister__selection">
+            <div className="useSelection__contianer">
+              <label className="userRegister__label" htmlFor="race">
+                Raza:
+              </label>
+              <input
+                className="userRegister__input"
+                {...register('race')}
+                id="race"
+                type="text"
+                required
+              />
+            </div>
+            <div className="useSelection__contianer">
+              <label className="userRegister__label" htmlFor="age">
+                Edad:
+              </label>
+              <input
+                className="userRegister__input"
+                {...register('age')}
+                id="age"
+                type="text"
+                required
+              />
+            </div>
           </div>
-          <div className="userRegister__div">
-            <label className="userRegister__label" htmlFor="age">
-              Edad:
-            </label>
-            <input
-              className="userRegister__input"
-              {...register('age')}
-              id="age"
-              type="text"
-              required
-            />
-          </div>
-          <div className="userRegister__div">
+          <div className="userRegister__esterelizado ">
             <label className="userRegister__label" htmlFor="sterilization">
-              Esterilización:
+              Esterilizado (a):
             </label>
-            <input
-              className="userRegister__input"
+            <select
+              id="species"
               {...register('sterilization')}
-              id="sterilization"
-              type="text"
-              required
-            />
+              className="custom-select userRegister__select"
+            >
+              <option value="SI">SI</option>
+              <option value="No">No</option>
+            </select>
           </div>
           <div className="userRegister__div">
             <label className="userRegister__label" htmlFor="description">
               Descripción:
             </label>
+
             <textarea
-              className="userRegister__input"
+              className="userRegister__input userRegister__textarea "
               {...register('description')}
               id="description"
-              rows="5"
-              cols="23"
+              rows="15"
+              cols="50"
               required
               placeholder="Describir las características más relevantes de su mascota"
             />
@@ -245,16 +301,16 @@ const UserRegisterPet = () => {
               {selectedImage && <img src={selectedImage} alt="Preview" />}
             </div>
           </div>
-          <div className="userRegister__div">
+          <div className="userRegister__chek">
+            <img src="../checkRegister.jpeg" alt="" />
             <p className="userRegister__checkRegister">
-              <img src="../checkRegister.jpeg" alt="" />
               Verifique todos los datos antes de registrarlos
             </p>
           </div>
           <button className="userRegister__button">registrar</button>
         </form>
       </div>
-      <h4 className="copyRigth">Copyrigth © Aquí Estoy - Todos los derechos reservados</h4>
+      <h4 className="copyRigth">Copyrigth © Aquí Estoy con QR - Todos los derechos reservados</h4>
     </div>
   );
 };
