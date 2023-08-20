@@ -1,7 +1,6 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import ReactPlayer from 'react-player';
 
 const AdminGenereateQrLazy = lazy(() => import('./pages/AdminGenereateQr'));
 const ProtectedRoutesLazy = lazy(() => import('./pages/ProtectedRoutes'));
