@@ -138,7 +138,6 @@ const UserViewPet = ({ existUser }) => {
                   <i className="bx bx-phone"></i>
                 </a>
               </li>
-              <li></li>
               <li>
                 <a
                   href="https://api.whatsapp.com/send?phone=51958004140"
@@ -148,6 +147,8 @@ const UserViewPet = ({ existUser }) => {
                   <i className="bx bxl-whatsapp"></i>
                 </a>
               </li>
+            </ul>
+            <ul>
               <li>
                 <a
                   href="https://www.instagram.com/aquiestoy.conqr/"
