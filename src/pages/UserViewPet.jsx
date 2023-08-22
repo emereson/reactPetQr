@@ -81,7 +81,7 @@ const UserViewPet = ({ existUser }) => {
               <li>
                 Esterilizado <p>{existUser?.user.sterilization}</p>
               </li>
-              <li></li>
+
               <li className="userViewPet__li">
                 Descripción <p>{existUser?.user.description}</p>
               </li>
@@ -138,6 +138,7 @@ const UserViewPet = ({ existUser }) => {
                   <i className="bx bx-phone"></i>
                 </a>
               </li>
+              <li></li>
               <li>
                 <a
                   href="https://api.whatsapp.com/send?phone=51958004140"
@@ -165,10 +166,12 @@ const UserViewPet = ({ existUser }) => {
                   <i className="bx bxl-facebook-circle"></i>
                 </a>
               </li>
+              <li className="userViewPewt__informaiton-net">
+                <a className="" href="https://web.aquiestoyconqr.com">
+                  <img src="./net1.jpeg" alt="" />
+                </a>
+              </li>
             </ul>
-            <a className="userViewPewt__informaiton-net" href="https://web.aquiestoyconqr.com">
-              <img src="./net.jfif" alt="" />
-            </a>
             <h4>www.web.aquiestoyconqr.com</h4>
             <img src="./dog.png" alt="" />
           </div>

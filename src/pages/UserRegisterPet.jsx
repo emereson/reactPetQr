@@ -59,19 +59,14 @@ const UserRegisterPet = () => {
       .post(url, formData)
       .then((res) => {
         console.log(res.data);
-        toast.success('Se registro Exitosamente');
+        toast.success('Gracias por registrarte');
         setTimeout(() => {
-          window.location.reload(); // Recargar la página después de 3 segundos
+          window.location.reload();
         }, 3000);
       })
       .catch((err) => console.log(err));
   };
 
-  const [selectedOption, setSelectedOption] = useState(null); // Inicialmente no se ha seleccionado nada
-
-  const handleSelectChange = (selectedOption) => {
-    setSelectedOption(selectedOption); // Actualizar el valor seleccionado en el estado
-  };
   if (existUser?.user.qrId === id) {
     return (
       <div>

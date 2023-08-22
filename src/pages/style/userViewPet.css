@@ -1,7 +1,7 @@
 .userViewPet__container {
   margin: auto;
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +37,7 @@
   justify-content: center;
   align-items: center;
   gap: 2em;
+  box-shadow: 0em 0em 1em 0.2em rgb(42, 42, 42);
 }
 .userViewPet__hereIam {
   display: flex;
@@ -47,12 +48,14 @@
 }
 
 .userViewPet__hereIam h2 {
+  padding-top: 1em;
   color: #287a5c;
   font-weight: 800;
+  margin-bottom: -0.4em;
 }
 
 .userViewPet__img {
-  height: 15em;
+  height: 17em;
   width: 14em;
   padding: 0.4em;
   border-radius: 1em;
@@ -110,10 +113,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 0.5em;
   border-radius: 1em;
-  background-color: #0e402e;
+  background-color: #115e42;
   padding: 0.5em;
 }
 
@@ -124,7 +127,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 0.8em;
+  font-size: 1em;
   color: #ffffff;
   font-weight: 600;
 }
@@ -139,6 +142,7 @@
   text-align: center;
 }
 .userViewPet__li {
+  border-top: 2px solid white;
   width: 100% !important;
   padding-top: 0.5em;
 }
@@ -236,7 +240,7 @@
 }
 
 .userViewPet__information p {
-  font-size: 0.85em;
+  font-size: 0.95em;
   font-weight: 700;
 }
 
@@ -244,10 +248,13 @@
   display: flex;
   gap: 2em;
   padding: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .userViewPet__information i {
-  font-size: 2.5em;
+  font-size: 3em;
   color: #ff5b0e;
   background-color: #186e4e;
   padding: 0.1em;
@@ -255,15 +262,14 @@
   cursor: pointer;
 }
 .userViewPewt__informaiton-net {
-  margin-top: 1em;
-  width: 30%;
+  width: 23%;
   margin: auto;
   display: flex;
   justify-content: center;
 }
 
 .userViewPewt__informaiton-net img {
-  width: 50%;
+  width: 100%;
 }
 .sponsor__container {
   position: relative;

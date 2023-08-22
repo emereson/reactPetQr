@@ -15,12 +15,12 @@ function App() {
 
   setTimeout(() => {
     setintro(true);
-  }, 3000);
+  }, 5000);
   return (
     <div>
       {!intro ? (
         <div className="intro__container" style={intro ? { opacity: 0, zIndex: -1 } : {}}>
-          <img src="intro1.gif" alt="" />
+          <img src="intro.gif" alt="" />
         </div>
       ) : (
         ''
