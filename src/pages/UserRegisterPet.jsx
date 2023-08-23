@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import UserViewPet from './UserViewPet';
 import './style/userRegister.css';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UserRegisterPet = () => {
   const { register, handleSubmit } = useForm();
@@ -58,7 +59,6 @@ const UserRegisterPet = () => {
     axios
       .post(url, formData)
       .then((res) => {
-        console.log(res.data);
         toast.success('Gracias por registrarte');
         setTimeout(() => {
           window.location.reload();
@@ -114,10 +114,10 @@ const UserRegisterPet = () => {
 
   return (
     <div>
+      <ToastContainer />
       <div className="userRegister__container">
         <span className="line__orange"></span>
         <span className="line__green"></span>
-        <ToastContainer />
         <form className="userRegister__form" onSubmit={handleSubmit(submit)}>
           <h2>REGISTRO</h2>
           <img src="../register.png" alt="" />
@@ -133,9 +133,9 @@ const UserRegisterPet = () => {
                 {...register('name')}
                 id="name"
                 type="text"
-                required
                 placeholder="Nombre y Apellidos"
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div className="userRegister__div">
@@ -149,9 +149,9 @@ const UserRegisterPet = () => {
                 {...register('whatsapp')}
                 id="whatsapp"
                 type="text"
-                required
                 placeholder="987654321"
                 onChange={handleInputChange2}
+                required
               />
             </div>
             <div className="userRegister__div">
@@ -166,8 +166,8 @@ const UserRegisterPet = () => {
                 id="email"
                 type="text"
                 placeholder="correo"
-                required
                 onChange={handleInputChange3}
+                required
               />
             </div>
             <div className="userRegister__div">
@@ -257,7 +257,7 @@ const UserRegisterPet = () => {
               {...register('sterilization')}
               className="custom-select userRegister__select"
             >
-              <option value="SI">SI</option>
+              <option value="SI">Si</option>
               <option value="No">No</option>
             </select>
           </div>
@@ -272,8 +272,8 @@ const UserRegisterPet = () => {
               id="description"
               rows="15"
               cols="50"
-              required
               placeholder="Describir las características más relevantes de su mascota"
+              required
             />
           </div>
           <div className="userRegister__div">
@@ -284,9 +284,9 @@ const UserRegisterPet = () => {
               <input
                 id="petImg"
                 type="file"
-                required
                 {...register('petImg')}
                 onChange={handleImageChange}
+                required
               />
               <p className="userRegister__imgPet" onClick={handleOnClick}>
                 <img src="../subirImg.png" alt="" />
@@ -302,7 +302,9 @@ const UserRegisterPet = () => {
               Verifique todos los datos antes de registrarlos
             </p>
           </div>
-          <button className="userRegister__button">registrar</button>
+          <button type="submit" className="userRegister__button">
+            Registrar
+          </button>
         </form>
       </div>
       <h4 className="copyRigth">Copyrigth © Aquí Estoy con QR - Todos los derechos reservados</h4>

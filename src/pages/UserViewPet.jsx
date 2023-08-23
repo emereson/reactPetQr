@@ -91,7 +91,7 @@ const UserViewPet = ({ existUser }) => {
             <h2>Propietario </h2>
             <ul className="userViewPet__datePetUl">
               <li>
-                Nombre<p>{existUser?.user.name}</p>
+                Nombre<p>{existUser?.user.name} </p>
               </li>
               <li>
                 Número<p>{existUser?.user.whatsapp}</p>
@@ -122,13 +122,13 @@ const UserViewPet = ({ existUser }) => {
 
         <div className="userViewPet__information">
           <div className="userViewPet__information-allDate">
-            <h3>Aquí Estoy Con QR</h3>
+            <h3>Aquí Estoy con QR</h3>
             <p>Es la mejor aplicación para identificar a tu mascota que tanto quieres y cuidas.</p>
             <p>Te brindamos un código QR con acceso simplificado.</p>
             <p>
               Nosotros nos preocupamos por brindarte <br /> total seguridad y confianza, <br />{' '}
-              porque hemos desarrollado la mejor tecnología <br /> con un diseño exclusivo <br />{' '}
-              para una rápida comunicación y ubicación en tiempo real.
+              porque hemos desarrollado la mejor tecnología con un diseño exclusivo, <br /> para una
+              rápida comunicación y ubicación en tiempo real.
             </p>
             <p>Te ofrecemos stickers, placas y collares de identificación QR.</p>
 

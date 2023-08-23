@@ -146,8 +146,14 @@
   width: 100% !important;
   padding-top: 0.5em;
 }
+.userViewPet__li p {
+  text-align: start;
+}
 .userViewPet__date {
   margin: 0;
+}
+.userViewPet__date li {
+  width: 40%;
 }
 
 .userViewPet__location {
@@ -156,7 +162,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0.6em 0 0.5em 0;
+  padding: 0 0 0.5em 0;
+  margin-top: -0.5em;
   gap: 1em;
   background-color: white;
   border-radius: 1em;
@@ -168,7 +175,7 @@
   font-weight: 800;
   text-decoration: underline;
   color: #186e4e;
-  margin-top: -1em;
+  margin-top: -1.5em;
   margin-bottom: -1em;
 }
 .userViewPet__contactame {
@@ -211,6 +218,7 @@
   width: 85%;
   z-index: 1;
   background-color: white;
+  box-shadow: 0em 0em 1em 0.2em rgb(42, 42, 42);
   padding: 2em 0.5em 2em 0.5em;
 
   border-radius: 1em;
@@ -240,7 +248,7 @@
 }
 
 .userViewPet__information p {
-  font-size: 0.95em;
+  font-size: 1.2em;
   font-weight: 700;
 }
 
@@ -266,6 +274,9 @@
   margin: auto;
   display: flex;
   justify-content: center;
+}
+.userViewPet__information h4 {
+  font-size: 1.2em;
 }
 
 .userViewPewt__informaiton-net img {
