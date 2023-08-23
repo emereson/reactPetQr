@@ -20,7 +20,7 @@ function App() {
     <div>
       {!intro ? (
         <div className="intro__container" style={intro ? { opacity: 0, zIndex: -1 } : {}}>
-          <img src="intro.gif" alt="" />
+          <img src="INTRO_APP.gif" alt="" />
         </div>
       ) : (
         ''
